@@ -15,8 +15,8 @@ let register = (req,res) => {
     let email = req.body.email;
     let password = req.body.password;
     let name = req.body.name;
-    let lastName = req.body.last_name;
-    console.log(email, password, name, lastName);
+    let last_name = req.body.last_name;
+    console.log(email, password, name, last_name);
     
     let insertQuery = 'INSERT INTO registro (email,password,name,last_name) VALUES (?,?,?,?)';
 let query = mysql.format(insertQuery,[email , password, name, last_name]);
